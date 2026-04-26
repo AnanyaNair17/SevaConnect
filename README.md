@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SevaConnect – Volunteer Management Platform
+
+SevaConnect is a full-stack web platform built for NGOs to manage their volunteer workforce. Volunteers can sign up, view their assigned tasks, and track their contributions — while admins get a powerful dashboard to assign tasks, monitor progress, and manage all volunteer records.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Database | PostgreSQL |
+| ORM | Prisma |
+| Authentication | JWT + bcrypt (custom) |
+
+---
+
+## Features
+
+- **Volunteer Portal** — Sign up, view assigned volunteering tasks, track your contributions
+- **Admin Dashboard** — Assign tasks to volunteers, monitor progress, manage all records
+- **Secure Authentication** — Custom JWT-based auth with bcrypt password hashing
+- **Role-based Access** — Separate portals for volunteers and admins
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/seva-connect.git
+cd seva-connect
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Set up environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env` file in the root directory and add:
 
-## Learn More
+```env
+DATABASE_URL=postgresql://your-db-url-here
+JWT_SECRET=your-jwt-secret-here
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Run database migrations
+```bash
+npx prisma migrate dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Start the development server
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+seva-connect/
+├── app/
+│   ├── page.tsx          # Landing page
+│   ├── login/            # Volunteer login
+│   ├── signup/           # Volunteer signup
+│   └── admin/            # Admin dashboard
+├── prisma/
+│   └── schema.prisma     # Database schema
+└── public/               # Static assets
+```
+
+---
+
+## Team
+
+Niharika Pawar
+Swara Kadam
+Vaishali Sahajwani
+Ananya Nair 
+
+---
+
