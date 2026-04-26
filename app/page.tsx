@@ -25,19 +25,6 @@ export default function Home() {
                         </span>
                     </div>
 
-                    {/* NAV LINKS */}
-                    <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
-                        <a style={{ color: "#C8522A", borderBottom: "2px solid #C8522A", paddingBottom: "4px", fontSize: "0.85rem", fontWeight: 700, textTransform: "uppercase", cursor: "pointer", textDecoration: "none" }}>
-                            Home
-                        </a>
-                        <a style={{ color: "#58423b", fontSize: "0.85rem", fontWeight: 700, textTransform: "uppercase", cursor: "pointer", textDecoration: "none" }}>
-                            About
-                        </a>
-                        <a style={{ color: "#58423b", fontSize: "0.85rem", fontWeight: 700, textTransform: "uppercase", cursor: "pointer", textDecoration: "none" }}>
-                            Contact
-                        </a>
-                    </div>
-
                     {/* LOGIN */}
                     <Link href="/login">
                         <button style={{
@@ -69,16 +56,9 @@ export default function Home() {
                                 backgroundColor: "#C8522A", color: "white",
                                 fontWeight: 700, border: "none", cursor: "pointer", fontSize: "1rem"
                             }}>
-                                Start Tracking
+                                Start your journey as a volunteer
                             </button>
                         </Link>
-                        <button style={{
-                            padding: "14px 28px", borderRadius: "999px",
-                            backgroundColor: "#eee7df", fontWeight: 700,
-                            border: "none", cursor: "pointer", fontSize: "1rem"
-                        }}>
-                            Learn More
-                        </button>
                     </div>
                 </div>
 
